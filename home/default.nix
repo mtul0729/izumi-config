@@ -20,7 +20,7 @@
   #     xxx
   # '';
 
-  
+
 
   # 通过 home.packages 安装一些常用的软件
   # 这些软件将仅在当前用户下可用，不会影响系统级别的配置
@@ -74,7 +74,7 @@
     enable = true;
     # 自定义配置
     settings = {
-      add_newline = false;
+      # add_newline = false;
       aws.disabled = true;
       gcloud.disabled = true;
       line_break.disabled = true;
@@ -84,13 +84,9 @@
   programs.bash = {
     enable = true;
   };
+
   programs.fish = {
     enable = true;
-    plugins = [
-      # Enable a plugin (here grc for colorized command output) from nixpkgs
-      { name = "grc"; src = pkgs.fishPlugins.grc.src; }
-      # Manually packaging and enable a plugin
-    ];
   };
 
   # This value determines the Home Manager release that your
@@ -101,7 +97,7 @@
   # You can update Home Manager without changing this value. See
   # the Home Manager release notes for a list of state version
   # changes in each release.
-  home.stateVersion = "24.05";
+  home.stateVersion = "24.11";
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

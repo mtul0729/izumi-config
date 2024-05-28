@@ -46,10 +46,6 @@
     fcitx5.addons = with pkgs; [ fcitx5-m17n fcitx5-chinese-addons ];
   };
 
-  # Enable the X11 windowing system.
-  # services.xserver.enable = true;
-
-
   # Enable the Plasma 6 Desktop Environment.
   services.displayManager.sddm = {
     enable = true;
@@ -57,13 +53,6 @@
   };
   services.desktopManager.plasma6.enable = true;
   programs.kdeconnect.enable = true;
-
-  # Configure keymap in X11
-  # services.xserver.xkb.layout = "us";
-  # services.xserver.xkb.options = "eurosign:e,caps:escape";
-
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
 
   # Enable sound.
   sound.enable = true;
@@ -81,7 +70,7 @@
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       firefox
-      
+
     ];
 
   };
