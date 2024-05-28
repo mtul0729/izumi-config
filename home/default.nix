@@ -53,7 +53,8 @@
         ms-ceintl.vscode-language-pack-zh-hans
       ];
     })
-
+    kdePackages.discover
+    
     # nix related
     #
     # it provides the command `nom` works just like `nix`
