@@ -56,6 +56,7 @@
     wayland.enable = true;
   };
   services.desktopManager.plasma6.enable = true;
+  programs.kdeconnect.enable = true;
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
@@ -72,7 +73,7 @@
   };
   hardware.bluetooth.enable = true;
 
-  services.v2raya.enable = true; 
+  services.v2raya.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.izumi = {
