@@ -52,9 +52,9 @@
 
   # Enable the Plasma 6 Desktop Environment.
   services.displayManager.sddm = {
-      enable = true;
-      wayland.enable = true;
-    };
+    enable = true;
+    wayland.enable = true;
+  };
   services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
@@ -71,6 +71,8 @@
     package = pkgs.pulseaudioFull;
   };
   hardware.bluetooth.enable = true;
+
+  services.v2raya.enable = true; 
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.izumi = {
