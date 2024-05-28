@@ -46,29 +46,16 @@
     fcitx5.addons = with pkgs; [ fcitx5-m17n fcitx5-chinese-addons ];
   };
 
-
-  services.dae = {
-    enable = true;
-
-    openFirewall = {
-      enable = true;
-      port = 12345;
-    };
-  };
-
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
 
 
   # Enable the Plasma 6 Desktop Environment.
-  services.displayManager = {
-    sddm = {
+  services.displayManager.sddm = {
       enable = true;
       wayland.enable = true;
     };
-    plasma6.enable = true;
-  };
-
+  services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
@@ -79,8 +66,11 @@
 
   # Enable sound.
   sound.enable = true;
-  hardware.pulseaudio.enable = true;
-
+  hardware.pulseaudio = {
+    enable = true;
+    package = pkgs.pulseaudioFull;
+  };
+  hardware.bluetooth.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.izumi = {

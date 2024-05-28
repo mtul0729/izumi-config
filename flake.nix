@@ -31,8 +31,8 @@
       modules = [
         ./configuration.nix
         { _module.args = { inherit inputs; }; }
-        inputs.daeuniverse.nixosModules.dae
-        inputs.daeuniverse.nixosModules.daed
+        # inputs.daeuniverse.nixosModules.dae
+        # inputs.daeuniverse.nixosModules.daed
       ];
 
     };
