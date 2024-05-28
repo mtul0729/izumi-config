@@ -81,20 +81,7 @@
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       firefox
-      telegram-desktop
-      tree
-      (vscode-with-extensions.override {
-        vscodeExtensions = with vscode-extensions; [
-          jnoortheen.nix-ide
-          github.copilot
-          github.copilot-chat
-          bmalehorn.vscode-fish
-          ms-python.python
-          ms-azuretools.vscode-docker
-          ms-vscode-remote.remote-ssh
-          ms-ceintl.vscode-language-pack-zh-hans
-        ];
-      })
+      
     ];
 
   };
