@@ -31,7 +31,7 @@
   time.timeZone = "Asia/Shanghai";
 
   # Configure network proxy if necessary
-  networking.proxy.default = "http://127.0.0.1:20172";
+  networking.proxy.default = "http://127.0.0.1:20171";
   networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Select internationalisation properties.
@@ -63,6 +63,8 @@
   hardware.bluetooth.enable = true;
 
   services.v2raya.enable = true;
+  
+  services.flatpak.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.izumi = {

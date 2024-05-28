@@ -5,21 +5,27 @@
 		}
 	],
 	"settings": {
-		"nix.enableLanguageServer": true,
-		"nix.serverPath": "nil",
 		"nix.serverSettings": {
-			// settings for 'nil' LSP
-			"nil": {
-				"diagnostics": {
-					"ignored": [
-						"unused_binding",
-						"unused_with"
-					]
+			// settings for 'nixd' LSP
+			"nixd": {
+				"eval": {
+					// stuff
 				},
 				"formatting": {
-					"command": [
-						"nixpkgs-fmt"
-					]
+					"command": "nixpkgs-fmt"
+				},
+				"options": {
+					"enable": true,
+					"target": {
+						// tweak arguments here
+						"args": [],
+						// NixOS options
+						"installable": "<flakeref>#nixosConfigurations.<name>.options"
+						// Flake-parts options
+						// "installable": "<flakeref>#debug.options"
+						// Home-manager options
+						// "installable": "<flakeref>#homeConfigurations.<name>.options"
+					}
 				}
 			}
 		}
