@@ -24,27 +24,33 @@
     # substituers will be appended to the default substituters when fetching packages
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
-    nixosConfigurations.izumi-nixos = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        ./configuration.nix
-        { _module.args = { inherit inputs; }; }
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.izumi = import ./home;
+  outputs =
+    inputs@{ self
+    , nixpkgs
+    , home-manager
+    , nix-vscode-extensions
+    , ...
+    }: {
+      nixosConfigurations.izumi-nixos = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./configuration.nix
+          { _module.args = { inherit inputs; }; }
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.izumi = import ./home;
 
-          # Optionally, use home-manager.extraSpecialArgs to pass
-          # arguments to home.nix
-        }
-        # inputs.daeuniverse.nixosModules.dae
-        # inputs.daeuniverse.nixosModules.daed
-      ];
+            # Optionally, use home-manager.extraSpecialArgs to pass
+            # arguments to home.nix
+          }
+          # inputs.daeuniverse.nixosModules.dae
+          # inputs.daeuniverse.nixosModules.daed
+        ];
+
+      };
+
 
     };
-
-
-  };
 }

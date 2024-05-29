@@ -41,10 +41,7 @@
   #   keyMap = "us";
   #   useXkbConfig = true; # use xkb.options in tty.
   # };
-  i18n.inputMethod = {
-    enabled = "fcitx5";
-    fcitx5.addons = with pkgs; [ fcitx5-m17n fcitx5-chinese-addons ];
-  };
+
 
   # Enable the Plasma 6 Desktop Environment.
   services.displayManager.sddm = {
@@ -72,7 +69,6 @@
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.nushell;
     packages = with pkgs; [
-      firefox
 
     ];
 
