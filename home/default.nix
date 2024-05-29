@@ -92,6 +92,8 @@
     enable = true;
   };
   
+  programs.nushell.enable = true;
+
   services.syncthing = {
     enable = true;
     tray.enable = true;
