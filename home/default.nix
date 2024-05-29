@@ -53,6 +53,7 @@
         ms-ceintl.vscode-language-pack-zh-hans
       ];
     })
+    gh
     kdePackages.discover
 
     # nix related
