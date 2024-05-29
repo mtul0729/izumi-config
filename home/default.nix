@@ -37,6 +37,7 @@
     p7zip
 
     # utils
+    bat
     ripgrep # recursively searches directories for a regex pattern
     fd # simple, fast and user-friendly alternative to find
 
