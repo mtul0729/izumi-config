@@ -18,6 +18,7 @@
 
     helix.url = "github:helix-editor/helix/master";
     daeuniverse.url = "github:daeuniverse/flake.nix";
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
   nixConfig = {
     # substituers will be appended to the default substituters when fetching packages
