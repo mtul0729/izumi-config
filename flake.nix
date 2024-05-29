@@ -41,7 +41,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.izumi = import ./home;
-
+            home-manager.extraSpecialArgs = inputs;
             # Optionally, use home-manager.extraSpecialArgs to pass
             # arguments to home.nix
           }
