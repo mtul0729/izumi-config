@@ -11,7 +11,10 @@
   # environment.sessionVariables.NIXOS_OZONE_WL = "1";
   programs.vscode = {
     enable = true;
-    extensions = with nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace; [
+    extensions = with nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace-release;[
+      github.copilot-chat
+    ] ++
+    (with (nix-vscode-extensions.extensions.x86_64-linux.forVSCodeVersion "1.89.1").vscode-marketplace; [
       aaron-bond.better-comments
       anweber.vscode-httpyac
       arrterian.nix-env-selector
@@ -21,7 +24,6 @@
       # esbenp.prettier-vscode
       # espressif.esp-idf-extension
       github.copilot
-      github.copilot-chat
       # golang.go
       hashicorp.terraform
       janisdd.vscode-edit-csv
@@ -70,7 +72,7 @@
       vscode-icons-team.vscode-icons
       # wakatime.vscode-wakatime
       yzhang.markdown-all-in-one
-    ];
+    ]);
     # package = pkgs.vscode;
   };
 }
