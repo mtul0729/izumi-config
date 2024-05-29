@@ -70,6 +70,7 @@
   users.users.izumi = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    shell = pkgs.nushell;
     packages = with pkgs; [
       firefox
 

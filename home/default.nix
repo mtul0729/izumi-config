@@ -75,8 +75,6 @@
     userEmail = "min@max.mean";
   };
 
-  
-
   services.syncthing = {
     enable = true;
     tray.enable = true;
