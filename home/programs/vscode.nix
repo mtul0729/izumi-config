@@ -12,6 +12,7 @@
   programs.vscode = {
     enable = true;
     extensions = with nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace-release;[
+      # using release version instead of preview version for compatibility
       github.copilot-chat
     ] ++
     (with (nix-vscode-extensions.extensions.x86_64-linux.forVSCodeVersion "1.89.1").vscode-marketplace; [
@@ -25,7 +26,7 @@
       # espressif.esp-idf-extension
       github.copilot
       # golang.go
-      hashicorp.terraform
+      # hashicorp.terraform
       janisdd.vscode-edit-csv
       # jebbs.plantuml
       jeff-hykin.better-cpp-syntax
@@ -35,7 +36,7 @@
       mkhl.direnv
       ms-azuretools.vscode-docker
       ms-dotnettools.vscode-dotnet-runtime
-      ms-kubernetes-tools.vscode-kubernetes-tools
+      # ms-kubernetes-tools.vscode-kubernetes-tools
       ms-python.isort
       ms-python.python
       ms-python.vscode-pylance
@@ -55,7 +56,7 @@
       ms-vscode.remote-explorer
       ms-vscode.remote-server
       pinage404.nix-extension-pack
-      platformio.platformio-ide
+      # platformio.platformio-ide
       pomdtr.excalidraw-editor
       redhat.vscode-commons
       redhat.vscode-xml
